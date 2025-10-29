@@ -296,16 +296,16 @@ document.onkeydown = e => {
 };
 
 /* =====================   استرجاع موقع العميل (المدينة)   ===================== */
-// async function setClientCity() {
-//   try {
-//     const res   = await fetch('https://ipapi.co/json/');
-//     const data  = await res.json();
-//     const cityI = document.getElementById('inp_City');
-//     if (cityI) cityI.value = data.city;      // يكتب المدينة تلقائياً
-//   } catch (err) {
-//     console.error('Error fetching location:', err);
-//   }
-// }
+async function setClientCity() {
+  try {
+    const res   = await fetch('https://ipapi.co/json/');
+    const data  = await res.json();
+    const cityI = document.getElementById('inp_City');
+    if (cityI) cityI.value = data.city;      // يكتب المدينة تلقائياً
+  } catch (err) {
+    console.error('Error fetching location:', err);
+  }
+}
 
 /* =====================   فنكشن عشان تعمل ال key  ===================== */
 
