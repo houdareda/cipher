@@ -110,7 +110,7 @@ input, button{
 /* Start hero Section */
 
 .hero .content{
-  background: url(../images/bg-hero.jpg);
+  background: url(../images/bg-hero.webp);
   background-size: cover;
   background-position: bottom;
   padding-top: 8px;
@@ -151,6 +151,13 @@ input, button{
     font-size: 4vw;
     padding: 4px 1px 14px;
   }
+
+  .hero ul li.blue,
+  .hero ul li.black{
+  border-radius:20px;
+  margin: 0 auto 10px;
+}
+
 }
 
 /* ==========  md ≥ 768px  ========== */
@@ -183,10 +190,8 @@ input, button{
 
 /* ==========  xl ≥ 1200px  ========== */
 @media (min-width:1200px){
-  .hero ul li.orange ,
-  .hero ul li.white{
-  font-size: 28px;
-      width: 90%;
+.hero ul li{
+  width: 70%;
 }
 }
 
@@ -204,7 +209,7 @@ input, button{
 
 .doctor{
   position: relative;
-  background: url(../images/top_doc.png);
+  background: url(../images/top-doc.webp);
   background-size: cover;
   background-position: top center;
 }
@@ -258,7 +263,7 @@ input, button{
  .doctor ul li{
     margin-bottom: 20px;
     width: 47%;
-    font-size: 2.9vw;
+    font-size: 3.5vw;
   }
 
 }
@@ -274,24 +279,42 @@ input, button{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    background-position: top left;
+    position: relative;
+    overflow: hidden;
   }
 
   .doctor ul li{
-    font-size: 16px;
+    font-size: 18px;
   }
 
 
-  .doctor ul{
-    padding-block: 20px;
+  .doctor .img2{
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    width: 115%;
   }
+  }
+  @media (min-width:1100px){
+      .doctor .img2{
+        width: 110%;
+      }
   }
 
 
 /* ==========  xl ≥ 1200px  ========== */
 @media (min-width:1300px){
 .doctor ul li{
-  font-size: 19px;
+  font-size: 24px;
 }
+     .doctor .img2{
+        width: 102%;
+      }
+
+      .doctor .text{
+        padding-bottom: 30px;
+      }
 }
 
 /* End doctor Section */
@@ -305,7 +328,7 @@ input, button{
 
 .how_work{
   position: relative;
-  background: url(../images/bg-how-work.jpg) center/cover;
+  background: url(../images/bg-how-work.webp) center/cover;
   text-align: center;
 }
 
@@ -355,18 +378,23 @@ input, button{
 /* ==========  sm ≥ 576px  ========== */
 @media (min-width:576px){
 .how_work .top_how_work h3{
-  font-size: 6.5vw;
+  font-size: 6vw;
 }
 .how_work .top_how_work h5{
-  font-size: 5vw;
+  font-size: 6vw;
+    padding: 0 15px 10px;
 }
 .how_work ul li{
   font-size: 4vw;
-  margin-bottom: 15px;  
+  padding: 0 10px 8px;
+  border-radius: 10px;
+  width: max-content;
+  margin: 0 auto 10px;
 }
 .how_work .img_how_work{
-  width: 90%;
-  margin: 0 auto;
+  width: 80%;
+  margin: 0 auto 10px;
+  border-radius: 15px;
 }
 }
 
@@ -374,15 +402,16 @@ input, button{
 /* ==========  lg ≥ 992px  ========== */
 @media (min-width:992px){
   .how_work{
-    width: 50%;
+    width: 100%;
   }
 
   .how_work .top_how_work h3{
     font-size: 40px;
     margin-bottom: 10px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.425);
   }
   .how_work .top_how_work h5{
-    font-size: 27px;
+    font-size: 40px;
   }
   .how_work ul li{
     font-size: 20px;
@@ -390,6 +419,33 @@ input, button{
   }
   .how_work .img_how_work{
     width: 80%;
+  }
+
+
+  .how_work .img_how_work{
+  width: 100%;
+  border-radius: 15px;
+}
+.how_work .img_img_work{
+
+    border-radius: 15px;
+    width: 50%;
+  padding: 50px 0;
+  background: #fff;
+}
+
+.how_work .flex_pc{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+  .how_work .text_Work{
+    width: 45%;
+    padding-bottom: 30px;
   }
 
 }
@@ -511,6 +567,7 @@ input, button{
 @media (min-width:992px){
 .form_section{
   display: flex;
+  flex-direction: row-reverse;
 }
 .form_section .price{
   width: 50%;
